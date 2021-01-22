@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Attributes_Layout">
+        <!-- 强行添加一个 Adapter，便于在换主题时处理此 View -->
+        <attr name="tf_force" format="boolean" />
+        <!-- all Views -->
+        <attr name="tf_background" format="string" />
+
+        <!-- TextView -->
+        <attr name="tf_textColor" format="string" />
+        <attr name="tf_textColorHint" format="string" />
+        <!--
+            暂不支持，留给用户自定义，因为 TextView 提供了多个设置
+            setCompoundDrawablesXXX 方法，不知道用哪个合适
+         -->
+        <!-- <attr name="tf_drawableStart" format="string" /> -->
+        <!-- <attr name="tf_drawableEnd" format="string" /> -->
+        <!-- <attr name="tf_drawableLeft" format="string" /> -->
+        <!-- <attr name="tf_drawableRight" format="string" /> -->
+        <!-- <attr name="tf_drawableBottom" format="string" /> -->
+
+        <!-- CompoundButton: CheckBox, RadioButton, Switch -->
+        <attr name="tf_buttonTint" format="string" />
+        <attr name="tf_button" format="string" />
+
+        <!-- Switch -->
+        <!-- <attr name="tfThumbTint" format="string" />-->
+        <!-- <attr name="tfThumb" format="string" />-->
+        <attr name="tf_trackTint" format="string" />
+        <attr name="tf_track" format="string" />
+
+        <!-- ImageView -->
+        <attr name="tf_src" format="string" />
+
+        <!-- Toolbar -->
+        <attr name="tf_titleTextColor" format="string" />
+        <attr name="tf_subtitleTextColor" format="string" />
+
+        <!-- CarView -->
+        <attr name="tf_cardBackgroundColor" format="string" />
+
+        <!-- TabLayout -->
+        <attr name="tf_tabSelectedTextColor" format="string" />
+        <attr name="tf_tabIndicatorColor" format="string" />
+        <attr name="tf_tabTextColor" format="string" />
+        <attr name="tf_tabRippleColor" format="string" />
+
+        <!-- All TinableView -->
+        <attr name="tf_backgroundTint" format="string" />
+
+        <!-- ProgressBar -->
+        <attr name="tf_progressTint" format="string" />
+        <attr name="tf_indeterminateTint" format="string" />
+        <attr name="tf_progressBackgroundTint" format="string" />
+        <attr name="tf_indeterminateDrawable" format="string" />
+        <attr name="tf_progressDrawable" format="string" />
+
+        <!-- SeekBar -->
+        <attr name="tf_thumb" format="string" />
+        <attr name="tf_thumbTint" format="string" />
+
+        <!-- Spinner -->
+        <!-- <attr name="tf_backgroundTint" format="string" /> -->
+        <attr name="tf_popupBackground" format="string" />
+
+        <!-- ListView -->
+        <attr name="tf_divider" format="string" />
+    </declare-styleable>
+</resources>

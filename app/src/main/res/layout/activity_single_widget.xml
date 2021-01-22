@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:tf_background="appBackgroundColor"
+    android:background="?attr/appBackgroundColor"
+    android:id="@+id/content"
+    android:orientation="vertical"
+    tools:context=".SingleWidget">
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/spinner_theme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="?attr/appTextColor"
+        android:popupBackground="?attr/appBackgroundColor"
+        app:tf_backgroundTint="appTextColor"
+        app:tf_popupBackground="appBackgroundColor">
+    </androidx.appcompat.widget.AppCompatSpinner>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:onClick="onTest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

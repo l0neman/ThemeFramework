@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">ThemeFramework</string>
+
+    <string name="settings">Settings</string>
+
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+
+    <string name="remember_password">Remember password</string>
+    <string name="register">Register</string>
+
+    <string name="theme_pick">Theme Pick</string>
+
+    <string name="default_">Default</string>
+    <string name="black">Black</string>
+    <string name="white">White</string>
+
+    <string name="verse0">春眠不觉晓，处处闻啼鸟。夜来风雨声，花落知多少。</string>
+
+    <string name="go_back">Go back</string>
+</resources>

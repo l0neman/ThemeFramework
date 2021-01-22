@@ -1,0 +1,65 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="BaseTheme.Light" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorSecondary">@color/purple_700</item>
+    </style>
+
+    <style name="BaseTheme.Dark" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorSecondary">@color/purple_700</item>
+    </style>
+
+    <style name="AppTheme" parent="AppTheme.Default"></style>
+
+    <style name="AppTheme.Default" parent="AppTheme.White"></style>
+
+    <style name="AppTheme.Black" parent="BaseTheme.Dark">
+        <item name="colorPrimary">@color/blackColorPrimary</item>
+        <item name="colorPrimaryDark">@color/blackColorPrimaryDark</item>
+        <item name="colorAccent">@color/blackColorAccent</item>
+
+        <item name="appTextColor">@color/blackColorText</item>
+        <item name="appTextColorAlpha30">@color/blackColorTextAlpha30</item>
+        <item name="appTextColorDark">@color/whiteColorPrimaryDark</item>
+        <item name="appTextColorReverse">@color/blackColorTextReverse</item>
+        <item name="appBackgroundColor">@color/blackColorBackground</item>
+        <item name="appBackgroundColorDark">@color/blackColorBackgroundDark</item>
+        <item name="appBackgroundColorReverse">@color/blackColorBackgroundReverse</item>
+
+        <item name="ic_add">@drawable/ic_baseline_add_white_24</item>
+        <item name="ic_back">@drawable/ic_baseline_arrow_back_24_white</item>
+        <item name="ic_support">@drawable/ic_baseline_support_white_24</item>
+        <item name="ic_licenses">@drawable/ic_baseline_licenses_white_24</item>
+        <item name="ic_about">@drawable/ic_baseline_about_white_24</item>
+        <item name="ic_settings">@drawable/ic_baseline_settings_white_24</item>
+        <item name="ic_theme_icon">@drawable/ic_theme_icon_white</item>
+        <item name="ic_style">@drawable/ic_baseline_style_white_24</item>
+        <item name="ic_wechat">@drawable/ic_wechat</item>
+    </style>
+
+    <style name="AppTheme.White" parent="BaseTheme.Light">
+        <item name="colorPrimary">@color/whiteColorPrimary</item>
+        <item name="colorPrimaryDark">@color/whiteColorPrimaryDark</item>
+        <item name="colorAccent">@color/whiteColorAccent</item>
+
+        <item name="appTextColor">@color/whiteColorText</item>
+        <item name="appTextColorAlpha30">@color/whiteColorTextAlpha30</item>
+        <item name="appTextColorDark">@color/blackColorPrimary</item>
+        <item name="appTextColorReverse">@color/whiteColorTextReverse</item>
+        <item name="appBackgroundColor">@color/whiteColorBackground</item>
+        <item name="appBackgroundColorDark">@color/whiteColorBackgroundDark</item>
+        <item name="appBackgroundColorReverse">@color/whiteColorBackgroundReverse</item>
+
+        <item name="ic_add">@drawable/ic_baseline_add_black_24</item>
+        <item name="ic_back">@drawable/ic_baseline_arrow_back_24_black</item>
+        <item name="ic_support">@drawable/ic_baseline_support_black_24</item>
+        <item name="ic_licenses">@drawable/ic_baseline_licenses_black_24</item>
+        <item name="ic_about">@drawable/ic_baseline_about_black_24</item>
+        <item name="ic_settings">@drawable/ic_baseline_settings_black_24</item>
+        <item name="ic_theme_icon">@drawable/ic_theme_icon_black</item>
+        <item name="ic_style">@drawable/ic_baseline_style_black_24</item>
+        <item name="ic_wechat">@drawable/ic_wechat_dark</item>
+    </style>
+
+</resources>

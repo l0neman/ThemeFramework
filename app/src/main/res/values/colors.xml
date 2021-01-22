@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- IDE 默认生成的 -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- 白色主题的主要色彩 -->
+    <color name="whiteColorPrimary">#FFFFFF</color>
+    <color name="whiteColorPrimaryDark">#F5F5F5</color>
+    <color name="whiteColorAccent">#AFAFAF</color>
+    <!-- 白色主题的文字和背景色彩 -->
+    <color name="whiteColorText">#000000</color>
+    <color name="whiteColorTextAlpha30">#4D000000</color>
+    <color name="whiteColorTextReverse">#FFFFFF</color>
+    <color name="whiteColorBackground">#FFFFFF</color>
+    <color name="whiteColorBackgroundDark">#FFFFFF</color>
+    <color name="whiteColorBackgroundReverse">#303030</color>
+
+    <!-- 黑色主题的主要色彩 -->
+    <color name="blackColorPrimary">#121212</color>
+    <color name="blackColorPrimaryDark">#000000</color>
+    <color name="blackColorAccent">#AFAFAF</color>
+    <!-- 黑色主题的文字和背景色彩 -->
+    <color name="blackColorText">#FFFFFF</color>
+    <color name="blackColorTextAlpha30">#FFFFFF</color>
+    <color name="blackColorTextReverse">#303030</color>
+    <color name="blackColorBackground">#303030</color>
+    <color name="blackColorBackgroundDark">#101010</color>
+    <color name="blackColorBackgroundReverse">#FFFFFF</color>
+</resources>

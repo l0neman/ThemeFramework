@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/appBackgroundColor"
+    android:orientation="vertical"
+    app:tf_background="appBackgroundColor"
+    tools:context=".MainActivity">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/dl_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    app:cardBackgroundColor="?attr/appBackgroundColor"
+                    app:cardCornerRadius="10dp"
+                    app:tf_cardBackgroundColor="appBackgroundColor">
+
+                    <LinearLayout
+                        android:id="@+id/ll_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/username"
+                            android:textColor="?attr/appTextColor"
+                            app:tf_textColor="appTextColor" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="?attr/appTextColor"
+                            android:hint="content..."
+                            android:textColor="?attr/appTextColor"
+                            android:textColorHint="?attr/appTextColorAlpha30"
+                            app:tf_backgroundTint="appTextColor"
+                            app:tf_textColor="appTextColor"
+                            app:tf_textColorHint="appTextColorAlpha30" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="@string/password"
+                            android:textColor="?attr/appTextColor"
+                            app:tf_textColor="appTextColor" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="?attr/appTextColor"
+                            android:hint="content..."
+                            android:textColor="?attr/appTextColor"
+                            android:textColorHint="?attr/appTextColorAlpha30"
+                            app:tf_backgroundTint="appTextColor"
+                            app:tf_textColor="appTextColor"
+                            app:tf_textColorHint="appTextColorAlpha30" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checkedButton="@id/rb_a"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rb_a"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:buttonTint="?attr/appTextColor"
+                        android:text="@string/male"
+                        android:textColor="?attr/appTextColor"
+                        app:tf_buttonTint="appTextColor"
+                        app:tf_textColor="appTextColor" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rb_b"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="?attr/appTextColor"
+                        android:text="@string/female"
+                        android:textColor="?attr/appTextColor"
+                        app:tf_buttonTint="appTextColor"
+                        app:tf_textColor="appTextColor" />
+                </RadioGroup>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:buttonTint="?attr/appTextColor"
+                    android:text="@string/remember_password"
+                    android:textColor="?attr/appTextColor"
+                    app:tf_buttonTint="appTextColor"
+                    app:tf_textColor="appTextColor" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:onClick="onClickRegister"
+                    android:text="@string/register"
+                    android:textColor="?attr/appTextColor"
+                    app:tf_background="selectableItemBackground"
+                    app:tf_textColor="appTextColor" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="48dp"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_wechat_dark"
+                    app:tf_background="selectableItemBackgroundBorderless"
+                    app:tf_src="ic_wechat_dark" />
+            </LinearLayout>
+        </ScrollView>
+
+        <include layout="@layout/layout_left" />
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</LinearLayout>

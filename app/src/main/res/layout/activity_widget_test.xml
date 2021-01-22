@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/appBackgroundColor"
+    android:orientation="vertical"
+    android:padding="16dp"
+    app:tf_background="appBackgroundColor"
+    tools:context=".WidgetTest">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hello"
+        android:textColor="?attr/appTextColor"
+        app:tf_textColor="appTextColor" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="?attr/appTextColor"
+        android:textColor="?attr/appTextColor"
+        android:text="hello"
+        app:tf_buttonTint="appTextColor"
+        app:tf_textColor="appTextColor" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checkedButton="@id/rb_a"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rb_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:buttonTint="?attr/appTextColor"
+            android:text="@string/male"
+            android:textColor="?attr/appTextColor"
+            app:tf_buttonTint="appTextColor"
+            app:tf_textColor="appTextColor" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rb_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="?attr/appTextColor"
+            android:text="@string/female"
+            android:textColor="?attr/appTextColor"
+            app:tf_buttonTint="appTextColor"
+            app:tf_textColor="appTextColor" />
+    </RadioGroup>
+
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="?attr/appTextColor"
+        android:text="hello"
+        app:tf_buttonTint="appTextColor"
+        app:tf_textColor="appTextColor" />
+
+    <ProgressBar
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="50"
+        android:progressBackgroundTint="?attr/appTextColor"
+        android:progressTint="?attr/appTextColor"
+        app:tf_progressBackgroundTint="appTextColor"
+        app:tf_progressTint="appTextColor"
+        tools:ignore="MissingPrefix" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/sw_theme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hello"
+        android:textColor="?attr/appTextColor"
+        app:switchPadding="5dp"
+        app:tf_textColor="appTextColor"
+        app:tf_thumbTint="appTextColor"
+        app:tf_trackTint="appTextColorAlpha30"
+        app:thumbTint="?attr/appTextColor"
+        app:trackTint="?attr/appTextColorAlpha30" />
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="50"
+        android:progressBackgroundTint="?attr/appTextColor"
+        android:progressTint="?attr/appTextColor"
+        android:textColor="?attr/appTextColor"
+        android:thumbTint="?attr/appTextColor"
+        app:tf_progressBackgroundTint="appTextColor"
+        app:tf_progressTint="appTextColor"
+        app:tf_thumbTint="appTextColor" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="?attr/ic_add"
+        app:tf_backgroundTint="colorAccent"
+        app:tf_src="ic_add" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabIndicatorColor="?attr/appTextColor"
+        app:tabSelectedTextColor="?attr/appTextColor"
+        app:tabTextColor="?attr/appTextColorDark"
+        app:tf_tabIndicatorColor="appTextColor"
+        app:tf_tabSelectedTextColor="appTextColor"
+        app:tf_tabTextColor="appTextColorDark">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="tab0" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="tab1" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="tab2" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:subtitle="@string/app_name"
+        app:subtitleTextColor="?attr/appTextColor"
+        app:tf_subtitleTextColor="appTextColor"
+        app:tf_titleTextColor="appTextColorDark"
+        app:title="@string/app_name"
+        app:titleTextColor="?attr/appTextColorDark" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

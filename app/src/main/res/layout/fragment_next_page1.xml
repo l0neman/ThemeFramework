@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tv_page1"
+        android:background="?attr/appBackgroundColor"
+        app:tf_background="appBackgroundColor"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

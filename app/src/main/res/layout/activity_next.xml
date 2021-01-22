@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/appBackgroundColor"
+    android:orientation="vertical"
+    app:tf_background="appBackgroundColor"
+    tools:context=".ui.NextActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tb_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/appBackgroundColorDark"
+            app:subtitleTextColor="?attr/appTextColor"
+            app:tf_background="appBackgroundColorDark"
+            app:tf_subtitleTextColor="appTextColor"
+            app:tf_titleTextColor="appTextColor"
+            app:titleTextColor="?attr/appTextColor" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tl_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/appBackgroundColorDark"
+            app:tabIndicatorColor="?attr/appTextColor"
+            app:tabRippleColor="?attr/appTextColorAlpha30"
+            app:tabSelectedTextColor="?attr/appTextColor"
+            app:tabTextColor="?attr/appTextColorDark"
+            app:tf_background="appBackgroundColorDark"
+            app:tf_tabIndicatorColor="appTextColor"
+            app:tf_tabRippleColor="appTextColorAlpha30"
+            app:tf_tabSelectedTextColor="appTextColor"
+            app:tf_tabTextColor="appTextColorDark" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vp_next"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

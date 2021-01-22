@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:id="@+id/sb_page0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:max="100"
+            android:progress="50"
+            android:progressBackgroundTint="?attr/appTextColor"
+            android:progressTint="?attr/appTextColor"
+            android:thumbTint="?attr/appTextColor"
+            app:tf_progressBackgroundTint="appTextColor"
+            app:tf_progressTint="appTextColor"
+            app:tf_thumbTint="appTextColor" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_verse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/verse0"
+            android:textColor="?attr/appTextColor"
+            app:tf_textColor="appTextColor" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_go_back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="?attr/selectableItemBackground"
+            android:text="@string/go_back"
+            android:textColor="?attr/appTextColor"
+            app:tf_background="selectableItemBackground"
+            app:tf_textColor="appTextColor" />
+
+        <ListView
+            android:id="@+id/lv_page0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:divider="?attr/appTextColorAlpha30"
+            android:dividerHeight="0.5dp"
+            app:tf_divider="appTextColorAlpha30"
+            tools:ignore="MissingPrefix" />
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:clickable="true"
+        android:contentDescription="@null"
+        android:focusable="true"
+        android:src="?attr/ic_add"
+        app:tf_backgroundTint="colorAccent"
+        app:tf_src="ic_add" />
+</RelativeLayout>

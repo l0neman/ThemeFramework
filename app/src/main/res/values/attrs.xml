@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Theme Framework 主题示例 -->
+    <!-- 字体颜色 -->
+    <attr name="appTextColor" format="color" />
+    <attr name="appTextColorAlpha30" format="color" />
+    <attr name="appTextColorDark" format="color" />
+    <!-- 字体颜色反色 -->
+    <attr name="appTextColorReverse" format="color" />
+    <!-- 背景颜色 -->
+    <attr name="appBackgroundColor" format="color" />
+    <attr name="appBackgroundColorDark" format="color" />
+    <!-- 背景颜色反色 -->
+    <attr name="appBackgroundColorReverse" format="color" />
+    <!-- 背景颜色透明度 -->
+    <!-- <attr name="appColorBackgroundAlpha30" format="color" /> -->
+
+    <!-- 主题相关图标 -->
+    <attr name="ic_add" format="reference" />
+    <attr name="ic_back" format="reference" />
+    <attr name="ic_settings" format="reference" />
+    <attr name="ic_support" format="reference" />
+    <attr name="ic_licenses" format="reference" />
+    <attr name="ic_about" format="reference" />
+    <attr name="ic_theme_icon" format="reference"/>
+    <attr name="ic_style" format="reference"/>
+    <attr name="ic_wechat" format="reference"/>
+
+    <!-- button -->
+    <!-- CheckBox -->
+    <!-- RadioButton -->
+    <!-- ProgressBar -->
+    <!-- Switch -->
+    <!-- SeekBar -->
+    <!-- Toolbar -->
+    <!-- TabLayout -->
+
+    <!-- FloatingActionButton -->
+</resources>
