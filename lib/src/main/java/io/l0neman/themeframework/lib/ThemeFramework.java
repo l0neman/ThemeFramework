@@ -255,7 +255,7 @@ public class ThemeFramework {
    * @see #addView(AppCompatActivity, View, ThemeAttributeAdapter)
    */
   public <T extends View> void addView(Fragment fragment, T view,
-                                       ViewAttributeAdapter<T> attributeAdapter) {
+                                       ThemeAttributeAdapter<T> attributeAdapter) {
     getLifecycleOwnerLayoutThemeSwitcher(fragment).addView(view, attributeAdapter);
   }
 
