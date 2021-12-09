@@ -5,6 +5,7 @@ import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.SparseIntArray;
 import android.view.View;
 
 import androidx.annotation.LayoutRes;
@@ -55,22 +56,54 @@ public class ThemeFramework {
   private final Set<Fragment> mBoundFragments = new ArraySet<>();
   private final Map<LifecycleOwner, LifecycleOwnerThemeSwitcher> mLifecycleOwnerThemeSwitchers = new ArrayMap<>();
 
+  private static ThemeValueAdapter mThemeValueAdapter;
+  private final SparseIntArray mThemeValues = new SparseIntArray();
+
+  /**
+   * 提供主题索引适配器
+   */
+  public interface ThemeValueAdapter {
+    /** 根据索引取得对应的主题资源 id */
+    @StyleRes
+    int getThemeId(int index);
+
+    /** 主题资源数量 */
+    int getThemeCount();
+  }
+
   /**
    * 初始化 ThemeFramework，设置默认主题
    * ，建议在 Application#onCreate 中调用
    *
    * @param app          提供 Application Context
-   * @param defaultTheme 首次应用默认主题
+   * @param adapter     主题资源 id 与索引的映射适配器，默认主题索引为 0
    */
-  public void setup(Application app, @StyleRes int defaultTheme) {
+  public void setup(Application app, ThemeValueAdapter adapter) {
     this.mApp = app;
     mThemeResources = new ThemeResources(app);
+    mThemeValueAdapter = adapter;
+    initThemeValues();
 
-    final int themeFromSp = getThemeFromSp();
-    final int setTheme = themeFromSp == -1 ? defaultTheme : themeFromSp;
+    final int themeIndex = getThemeIndexFromSp();
+    final int setTheme = themeIndex < 0 || themeIndex >= adapter.getThemeCount() ?
+            getThemeByIndex(0) : getThemeByIndex(themeIndex);
 
     switchTheme(setTheme);
     handleActivityTheme();
+  }
+
+  private int getThemeByIndex(int index) {
+    return mThemeValueAdapter.getThemeId(index);
+  }
+
+  private int getThemeIndexById(int id) {
+    return mThemeValues.get(id);
+  }
+
+  private void initThemeValues() {
+    int themeCount = mThemeValueAdapter.getThemeCount();
+    for (int i = 0; i < themeCount; i++)
+      mThemeValues.put(mThemeValueAdapter.getThemeId(i), i);
   }
 
   private void handleActivityTheme() {
@@ -284,7 +317,7 @@ public class ThemeFramework {
       return;
 
     this.mTheme = theme;
-    putThemeTpSp(mTheme);
+    putThemeIndexToSp(getThemeIndexById(mTheme));
 
     mApp.setTheme(theme);
 
@@ -353,12 +386,12 @@ public class ThemeFramework {
   // SharePreferences Utils
   ///////////////////////////////////////////////////////////////////////////
 
-  private void putThemeTpSp(int theme) {
+  private void putThemeIndexToSp(int theme) {
     SharedPreferences sp = mApp.getSharedPreferences(SP_FILE_THEME, Context.MODE_PRIVATE);
     sp.edit().putInt(SP_KEY_THEME, theme).apply();
   }
 
-  private int getThemeFromSp() {
+  private int getThemeIndexFromSp() {
     SharedPreferences sp = mApp.getSharedPreferences(SP_FILE_THEME, Context.MODE_PRIVATE);
     return sp.getInt(SP_KEY_THEME, -1);
   }

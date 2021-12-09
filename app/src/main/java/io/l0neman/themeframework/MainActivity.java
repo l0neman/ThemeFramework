@@ -1,10 +1,7 @@
 package io.l0neman.themeframework;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.res.TypedArray;
 import android.os.Bundle;
-import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -14,7 +11,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.graphics.drawable.DrawerArrowDrawable;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -23,19 +19,13 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
 import io.l0neman.themeframework.base.BaseActivity;
 import io.l0neman.themeframework.dialog.SettingsDialog;
-import io.l0neman.themeframework.lib.ThemeAttributeAdapter;
-import io.l0neman.themeframework.lib.ThemeAttributeAdapterManager;
 import io.l0neman.themeframework.lib.ThemeChangeListener;
 import io.l0neman.themeframework.lib.ThemeFramework;
-import io.l0neman.themeframework.lib.adapter.TextViewAttributeAdapter;
-import io.l0neman.themeframework.lib.adapter.ViewAttributeAdapter;
 import io.l0neman.themeframework.ui.NextActivity;
 
 public class MainActivity extends BaseActivity implements ThemeChangeListener {
