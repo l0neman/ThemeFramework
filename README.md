@@ -157,10 +157,27 @@ PS：
 
 ```java
 public class MyApp extends Application {
+
+  private static final int[] THEME_ARRAY = {
+    R.style.AppTheme_Default,
+    R.style.AppTheme_Black,
+    R.style.AppTheme_White,
+  };
+
   @Override public void onCreate() {
     super.onCreate();
-    // R.style.AppTheme 为应用首次启动默认的主题
-    ThemeFramework.getInstance().setup(this, R.style.AppTheme);
+    // 主题 id 数组第一个为应用首次启动默认的主题（R.style.AppTheme_Default）
+    ThemeFramework.getInstance().setup(this, new ThemeFramework.ThemeValueAdapter() {
+      @Override
+      public int getThemeId(int index) {
+        return THEME_ARRAY[index];
+      }
+
+      @Override
+      public int getThemeCount() {
+        return THEME_ARRAY.length;
+      }
+    });
   }
 }
 ```
